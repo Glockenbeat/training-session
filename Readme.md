@@ -1,3 +1,13 @@
 # React Workshop
 
-This is part of a React workshop with multiple lessons. In order to not spoil any of the lessons or results the readme has been removed.
+This is part of a React workshop with multiple lessons.
+
+NOTE: Example implementation not done yet!
+
+## This lesson
+
+#### Tasks
+
+- Add a database to the docker setup
+- Add a post route which can be used to store additional pokemon in the database
+- Replace the JSON data store in the GET route and read pokemons from the database instead
