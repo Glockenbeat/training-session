@@ -16,11 +16,3 @@ services:
           - "41002:8100"
         volumes:
           - ./backend:/src
-        environment:
-          DATABASE_HOST: 'mongodb'
-        depends_on:
-          - mongodb
-    mongodb:
-        image: mongo
-        ports:
-          - "41003:27017"
