@@ -1,4 +1,4 @@
-#React Workshop
+# React Workshop
 
 This is part of a React workshop with multiple lessons.
 
