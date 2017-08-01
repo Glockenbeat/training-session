@@ -1,9 +1,5 @@
 FROM node:8
 WORKDIR /src
 ENV NODE_ENV='development'
-RUN npm config set strict-ssl true && \
-    npm config set registry https://nexus.cgn.cleverbridge.com/repository/npm-group/
-
 RUN npm install --global nodemon
-
 CMD nodemon --legacy-watch .
