@@ -6,8 +6,6 @@ This is part of a React workshop with multiple lessons.
 
 #### Tasks
 
-- Add new page which will show a simple list of pokemon names
-  - Pokemon list is available at http://pokeapi.co/api/v2/pokemon
-- Add new nav item to go to the Pokemon list page
-- Use react-redux for state management
-- Handle side effects appropriately
+- Add a new backend service which with a GET route returning a list of pokemons
+- Use this new backend service in the frontend instead of http://pokeapi.co/api/v2/pokemon
+- Add a docker setup to start both services and let them communicate with each other
