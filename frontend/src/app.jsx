@@ -13,14 +13,13 @@ import createSagaMiddleware from 'redux-saga';
 
 
 import reducers from './ducks';
-import Contact from './ContactForm';
-import Home from './Home';
-import Pokemons from './Pokemons';
+import ContactComponent from './ContactForm';
+import HomeComponent from './Home';
+import PokemonsComponent from './Pokemons';
 import './styles.css';
 import rootSaga from './sagas';
 
 const sagaMiddleware = createSagaMiddleware();
-
 
 const store = createStore(reducers, composeWithDevTools(
   applyMiddleware(sagaMiddleware),
@@ -64,15 +63,15 @@ ReactDOM.render(
           <Route
             exact
             path="/"
-            component={Home}
+            component={HomeComponent}
           />
           <Route
             path="/pokemons"
-            component={Pokemons}
+            component={PokemonsComponent}
           />
           <Route
             path="/contact"
-            component={Contact}
+            component={ContactComponent}
           />
         </div>
       </div>

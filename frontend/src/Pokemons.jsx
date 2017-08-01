@@ -31,7 +31,7 @@ Pokemons.propTypes = {
   pokemon: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
   })).isRequired,
-}
+};
 
 const mapStateToProps = ({ pokemon }) => ({ pokemon });
 const mapDispatchToProps = { mounted };
