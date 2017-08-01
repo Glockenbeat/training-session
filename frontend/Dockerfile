@@ -1,8 +1,0 @@
-FROM node:8
-WORKDIR /src
-ENV RUN_TESTS='NODE_ENV=development && npm install --silent && npm test'
-RUN npm config set strict-ssl true && \
-    npm config set registry https://nexus.cgn.cleverbridge.com/repository/npm-group/
-COPY . /src
-RUN npm install --silent && npm run build
-CMD node .
