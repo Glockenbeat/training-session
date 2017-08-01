@@ -14,7 +14,9 @@ describe('getPokemon', () => {
 
   it('dispatches an action with the results list ', () => {
     const returnValue = {
-      data: ['foo', 'bar']
+      data: {
+        results: ['foo', 'bar'],
+      },
     };
 
     expect(saga.next(returnValue).value).toEqual(put(received(['foo', 'bar'])));

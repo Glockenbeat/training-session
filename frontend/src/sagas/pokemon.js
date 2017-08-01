@@ -4,8 +4,8 @@ import axios from 'axios';
 import { MOUNTED, received } from '../ducks/pokemon';
 
 export function* getPokemon() {
-  const result = yield call(axios.get, 'http://localhost:41002/pokemons');
-  yield put(received(result.data));
+  const result = yield call(axios.get, 'http://pokeapi.co/api/v2/pokemon');
+  yield put(received(result.data.results));
 }
 
 export default function* pokemonSagas() {
