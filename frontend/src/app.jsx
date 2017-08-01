@@ -1,33 +1,19 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { createStore } from 'redux';
 import {
   BrowserRouter as Router,
   Route,
   NavLink,
 } from 'react-router-dom';
-import createSagaMiddleware from 'redux-saga';
-
 
 import reducers from './ducks';
 import Contact from './ContactForm';
 import Home from './Home';
-import Pokemons from './Pokemons';
 import './styles.css';
-import rootSaga from './sagas';
 
-const sagaMiddleware = createSagaMiddleware();
-
-
-const store = createStore(reducers, composeWithDevTools(
-  applyMiddleware(sagaMiddleware),
-));
-
-sagaMiddleware.run(rootSaga);
-
+const store = createStore(reducers);
 
 ReactDOM.render(
   <Provider store={store}>
@@ -46,14 +32,6 @@ ReactDOM.render(
           <li>
             <NavLink
               activeClassName="active"
-              to="/pokemons"
-            >
-              Pokemons
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              activeClassName="active"
               to="/contact"
             >
               Contact
@@ -65,10 +43,6 @@ ReactDOM.render(
             exact
             path="/"
             component={Home}
-          />
-          <Route
-            path="/pokemons"
-            component={Pokemons}
           />
           <Route
             path="/contact"
