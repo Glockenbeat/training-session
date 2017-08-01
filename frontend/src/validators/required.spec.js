@@ -8,7 +8,7 @@ describe('required validator', () => {
   });
 
   it('returns an error with an empty string', () => {
-    expect(required('')).toEqual(jasmine.any(String));
+    expect(typeof (required(''))).toBe('string');
   });
 
   it('returns no error with a non-empty string', () => {

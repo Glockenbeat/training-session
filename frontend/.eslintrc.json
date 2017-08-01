@@ -5,8 +5,8 @@
     ],
     "plugins": [
         "react",
-        "import",
         "jsx-a11y",
+        "import",
         "json"
     ],
     "env": {
@@ -20,6 +20,10 @@
       "import/no-unresolved": ["error", { "ignore": ["^test", "^src","^shared"] }],
       "import/extensions" : 0,
       "comma-dangle":"warn",
-      "jsx-a11y/no-static-element-interactions": "off"
+      "jsx-a11y/no-static-element-interactions": "off",
+      "no-console": 0,
+      "import/first": 0,
+      "import/prefer-default-export": 0,
+      "react/forbid-prop-types": 0
     }
 }

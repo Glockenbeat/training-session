@@ -8,7 +8,7 @@ describe('max length validator', () => {
   });
 
   it('returns an error with a string longer than max', () => {
-    expect(maxLength(10)('1234567890-')).toEqual(jasmine.any(String));
+    expect(typeof (maxLength(10)('1234567890-'))).toBe('string');
   });
 
   it('returns no error with a string shorter than max', () => {

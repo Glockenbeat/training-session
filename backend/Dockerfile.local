@@ -1,5 +1,0 @@
-FROM node:8
-WORKDIR /src
-ENV NODE_ENV='development'
-RUN npm install --global nodemon
-CMD nodemon --legacy-watch .
