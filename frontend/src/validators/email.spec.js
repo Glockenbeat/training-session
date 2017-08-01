@@ -8,7 +8,7 @@ describe('email validator', () => {
   });
 
   it('returns an error with an invalid email', () => {
-    expect(email('not@valid')).toEqual(jasmine.any(String));
+    expect(typeof (email('not@valid'))).toBe('string');
   });
 
   it('does not return an error with a valid email', () => {
