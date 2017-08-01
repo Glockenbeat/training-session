@@ -11,7 +11,7 @@ reports
 .metadata
 .vscode
 .idea
-dist
+frontend/dist/app.bundle.js
 build
 .nyc_output
 backup
