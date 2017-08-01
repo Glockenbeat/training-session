@@ -6,6 +6,6 @@ This is part of a React workshop with multiple lessons.
 
 #### Tasks
 
-- Add a new backend service which with a GET route returning a list of pokemons
-- Use this new backend service in the frontend instead of http://pokeapi.co/api/v2/pokemon
-- Add a docker setup to start both services and let them communicate with each other
+- Add a database to the docker setup
+- Add a post route which can be used to store additional pokemon in the database
+- Replace the JSON data store in the GET route and read pokemons from the database instead
