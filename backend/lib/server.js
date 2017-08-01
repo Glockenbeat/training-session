@@ -4,8 +4,6 @@ const Hapi = require('hapi');
 const routes = require('./routes');
 const plugins = require('./plugins');
 
-const mongodb = require('./database');
-
 const server = new Hapi.Server();
 server.connection({
   host: config.server.host,
@@ -27,8 +25,6 @@ if (!module.parent) {
   initialize()
     .then(() => server.start())
     .then(() => { console.info({ serverInfo: server.info.uri }, 'Server running at:'); })
-    .then(() => mongodb.connect())
-    .then(() => mongodb.initialize())
     .then(() => console.log('App init done!'))
     .catch(error => console.error(error));
 }
